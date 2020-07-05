@@ -1,0 +1,123 @@
+$cd-btn: #011c37;
+$cd-txt: #15DEA5;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    background: #fff;
+    color: $cd-txt;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// button 
+// .btn {
+//     background: $cd-btn;
+//     font-size: 3rem;
+//     cursor: pointer;
+//     padding: 1.85rem 3rem;
+//     border-radius: 10rem;
+//    transition: transform 400ms;
+//    transform: scale(1);
+//     &:hover +.ball {
+//         // add a property to animate
+//         transform: scale(1.15);
+//     }
+    
+// }
+
+// .ball {
+//     width: $ball-size;
+//     height: $ball-size;
+//     background: $cd-secondary;
+//     margin-bottom: 1rem;
+//     border-radius: $ball-size * 0.5;
+// }
+$cd-primary: orange;
+$ball-size:100%;
+$cd-secondary: green;
+
+
+.btn {
+    background: $cd-primary;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+    &:active + .ball{
+        transform: scale(1.0);
+    }
+}
+
+.ball {
+    width: $ball-size;
+    height: $ball-size;
+    background: $cd-secondary;
+    margin-bottom: 1rem;
+    border-radius: $ball-size * 0.5;
+    transform: scale(0.1);
+    transition: transform 4000ms;
+}
+
+$cd-btn-start: rgba(1, 28, 55, 0);
+$cd-btn-end: rgba(1, 28, 55, 1);
+.button{
+    background-color: $cd-btn-start;
+    border: 4px solid $cd-btn;
+    border-radius: 10rem;
+    cursor: pointer;
+    font-size: 3rem;
+    padding: 1.85rem 3rem;
+    position: relative;
+    // transition: all 450ms;
+    transition: transform 450ms, background-color 300ms 150ms   ;
+    &:hover {
+        transform: scale(1.13);
+        background-color: $cd-btn-end;
+    }
+}
+
+ // email 
+ $cd-txt: #6300a0;
+ $cd-txt--invalid: #fff;
+ $cd-danger: red;
+ .form {
+     &__group {
+         & input {
+            border: 2px solid red;
+            border-radius: 100rem;
+            color: $cd-txt;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            outline: none;
+            padding: .5rem 1.5rem;
+            width: 100%;
+            transition: background-color 500ms;
+             &:focus {
+                border: 2px solid $cd-txt;
+             }
+             &:not(:focus):invalid {
+                background: $cd-danger;
+                border: 2px solid $cd-danger;
+                color: $cd-txt--invalid;
+            }
+         }
+     }
+ }

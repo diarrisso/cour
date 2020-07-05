@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  color: #15DEA5;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  background: orange;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+}
+
+.btn:active + .ball {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.ball {
+  width: 100%;
+  height: 100%;
+  background: green;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transition: -webkit-transform 4000ms;
+  transition: -webkit-transform 4000ms;
+  transition: transform 4000ms;
+  transition: transform 4000ms, -webkit-transform 4000ms;
+}
+
+.button {
+  background-color: rgba(1, 28, 55, 0);
+  border: 4px solid #011c37;
+  border-radius: 10rem;
+  cursor: pointer;
+  font-size: 3rem;
+  padding: 1.85rem 3rem;
+  position: relative;
+  -webkit-transition: background-color 300ms 150ms, -webkit-transform 450ms;
+  transition: background-color 300ms 150ms, -webkit-transform 450ms;
+  transition: transform 450ms, background-color 300ms 150ms;
+  transition: transform 450ms, background-color 300ms 150ms, -webkit-transform 450ms;
+}
+
+.button:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+  background-color: #011c37;
+}
+
+.form__group input {
+  border: 2px solid red;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: .5rem 1.5rem;
+  width: 100%;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.form__group input:focus {
+  border: 2px solid #6300a0;
+}
+
+.form__group input:not(:focus):invalid {
+  background: red;
+  border: 2px solid red;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
