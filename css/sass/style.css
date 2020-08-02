@@ -102,4 +102,11 @@ body {
   border: 2px solid red;
   color: #fff;
 }
+
+.column {
+  -webkit-column-count: 1;
+          column-count: 1;
+  -webkit-column-width: 355px;
+          column-width: 355px;
+}
 /*# sourceMappingURL=style.css.map */
